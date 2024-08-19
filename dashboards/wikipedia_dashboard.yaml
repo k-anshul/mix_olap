@@ -1,0 +1,100 @@
+# Dashboard YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/dashboards
+
+type: metrics_view
+title: Wikipedia
+connector: druid
+table: wikipedia
+timeseries: __time
+dimensions:
+  - label: Isrobot
+    column: isRobot
+    description: ""
+  - label: Channel
+    column: channel
+    description: ""
+  - label: Flags
+    column: flags
+    description: ""
+  - label: Isunpatrolled
+    column: isUnpatrolled
+    description: ""
+  - label: Page
+    column: page
+    description: ""
+  - label: Diffurl
+    column: diffUrl
+    description: ""
+  - label: Comment
+    column: comment
+    description: ""
+  - label: Isnew
+    column: isNew
+    description: ""
+  - label: Isminor
+    column: isMinor
+    description: ""
+  - label: Isanonymous
+    column: isAnonymous
+    description: ""
+  - label: User
+    column: user
+    description: ""
+  - label: Namespace
+    column: namespace
+    description: ""
+  - label: Cityname
+    column: cityName
+    description: ""
+  - label: Countryname
+    column: countryName
+    description: ""
+  - label: Regionisocode
+    column: regionIsoCode
+    description: ""
+  - label: Metrocode
+    column: metroCode
+    description: ""
+  - label: Countryisocode
+    column: countryIsoCode
+    description: ""
+  - label: Regionname
+    column: regionName
+    description: ""
+measures:
+  - name: total_records
+    label: Total records
+    expression: COUNT(*)
+    description: ""
+    format_preset: humanize
+    valid_percent_of_total: true
+available_time_zones:
+  - America/Los_Angeles
+  - America/Chicago
+  - America/New_York
+  - Europe/London
+  - Europe/Paris
+  - Asia/Jerusalem
+  - Europe/Moscow
+  - Asia/Kolkata
+  - Asia/Shanghai
+  - Asia/Tokyo
+  - Australia/Sydney
+available_time_ranges:
+  - PT6H
+  - PT24H
+  - P7D
+  - P14D
+  - P4W
+  - P3M
+  - P12M
+  - rill-TD
+  - rill-WTD
+  - rill-MTD
+  - rill-QTD
+  - rill-YTD
+  - rill-PDC
+  - rill-PWC
+  - rill-PMC
+  - rill-PQC
+  - rill-PYC
